@@ -12,6 +12,11 @@ body {
     color: #333;
 }
 
+/* Container for Padding */
+.container {
+    padding: 0 20px;
+}
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -177,4 +182,77 @@ body {
 
 .footer-middle ul li a:hover, .footer-right ul li a:hover {
     color: #ffcc00;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero .left, .hero .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about .left, .about .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .hero .intro-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero .intro-content p {
+        font-size: 1rem;
+    }
+
+    .about .about-title {
+        font-size: 1.75rem;
+    }
+
+    .about .about-description {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .footer-middle ul, .footer-right .social-icons {
+        text-align: center;
+    }
 }
